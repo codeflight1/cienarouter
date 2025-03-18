@@ -18,7 +18,7 @@ def process_cli_input(file_path, history, t):
         if command == "set":
             index = int(args[0]) - 1
             value = int(args[1])
-            if index < 0 or index >3 :
+            if index < 0 or index >3 and value > -1 and value < 10:
                 print(f"Invalid Input - Error: {index}")
             else:
                 mutate_database(file_path, index, value)
